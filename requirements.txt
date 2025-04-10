@@ -1,6 +1,8 @@
 pyaudio
 torch==2.0.1
-transformers
+
 streamlit
 speechrecognition
 deep_translator
+
+transformers==4.36.2
