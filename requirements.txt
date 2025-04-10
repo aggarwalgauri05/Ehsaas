@@ -3,3 +3,4 @@ speechrecognition
 deep-translator
 transformers
 torch
+pyaudio
