@@ -17,7 +17,7 @@ os.system("pip install pyaudio torch==2.0.1 transformers")
 # Load Pretrained Emotion Detection Model
 @st.cache_resource  # Caches model to prevent reloading
 def load_emotion_model():
-    return pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base")
+    return pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base",device=-1)
 
 emotion_model = load_emotion_model()
 
