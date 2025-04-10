@@ -19,7 +19,11 @@ os.system("pip install pyaudio torch==2.0.1 transformers")
 def load_emotion_model():
     return pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base",device=-1)
 
-emotion_model = load_emotion_model()
+emotion_model = pipeline(
+    "text-classification",
+    model="j-hartmann/emotion-english-distilroberta-base",
+    torch_dtype="float32"
+)
 
 st.title("Ehsaas: Express Your Feelings 🧠💙")
 
